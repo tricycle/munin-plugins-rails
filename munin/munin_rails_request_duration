@@ -25,6 +25,8 @@ Options
   env.request_log_analyzer '/usr/local/bin'   # Path to gem. Use this for Debian.
   env.graph_category 'App'                    # Graph Category. Defaults to App.
 
+  env.actions 'heartbeat : DocumentsController#heartbeat.*;  doc : DocumentController#.*,OderController#.*'                           # Allow separate graphs based on action.  List of regexp patterns separated by a comma
+
 ln -s /usr/share/munin/plugins/rails_request_duration /etc/munin/plugins/rails_request_duration
 
 =head1 INTERPRETATION
